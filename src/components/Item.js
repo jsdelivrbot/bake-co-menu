@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 
 class Item extends Component {
   render() {
-    const { name, price } = this.props
+    const { name, image, description, price, available } = this.props
 
     return (
       <div className="inventory-item">
-        { name } - { price }
+        <p>{ name } - { price } - { description}</p>
       </div>
     )
   }
