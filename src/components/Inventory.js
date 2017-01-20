@@ -14,10 +14,10 @@ class Inventory extends Component {
   }
 }
 
-function mapStateToProps({ items }) {
-  return (
-    { items }
-  )
+function mapStateToProps(state) {
+  return {
+    items: state.items,
+  }
 }
 
 export default connect(mapStateToProps)(Inventory)
