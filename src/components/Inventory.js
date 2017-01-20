@@ -1,22 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-class Inventory extends Component {
-  renderItems() {
-    return this.props.items.map((item) => {
-      return (
-        <div key={ item.name }>
-          { item.name }
-        </div>
-      )
-    })
-  }
+import Item from './Item'
 
+class Inventory extends Component {
   render() {
     return (
       <div className="app-list-item">
         <h3>Inventory</h3>
-        { this.renderItems() }
+        { this.props.items.map((item, i) => <Item { ...item } key={ i } /> )}
       </div>
     )
   }
