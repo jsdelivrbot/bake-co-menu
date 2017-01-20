@@ -7,7 +7,7 @@ class Inventory extends Component {
   render() {
     return (
       <div className="app-list-item">
-        <h3>Inventory</h3>
+        <h3 className="title">Inventory</h3>
         { this.props.items.map((item, i) => <Item { ...item } key={ i } /> )}
 
         <ItemForm />

@@ -6,7 +6,10 @@ class Item extends Component {
 
     return (
       <div className="inventory-item">
-        <p>{ name } - { price } - { description}</p>
+        <p className="subtitle">{ name }</p>
+        <p>{ description}</p>
+        <p>${ price }</p>
+        <button className="button hvr-bounce-to-bottom">Remove item</button>
       </div>
     )
   }
