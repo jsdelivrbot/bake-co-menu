@@ -1,3 +1,5 @@
+import { ADD_ITEM } from '../actions/index'
+
 const defaultState = [
   {
     name: 'Bagel' ,
@@ -30,5 +32,15 @@ const defaultState = [
 ]
 
 export default (state = defaultState, action) => {
-  return state
+  switch(action.type) {
+    case ADD_ITEM:
+      const item = {
+        name: action.payload.name,
+        price: action.payload.price
+      }
+      return state.concat([ item ])
+
+    default:
+      return state
+  }
 }
