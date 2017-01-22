@@ -69,6 +69,10 @@ p {
   margin-bottom: 10px;
 }
 
+.order-item {
+  list-style: none;
+}
+
 .subtitle {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;

@@ -59,7 +59,6 @@ export default (state = defaultState, action) => {
     case ADD_TO_ORDER:
     return state.map((item) => {
       if (item.name === action.payload) {
-        console.log(item)
         return Object.assign(
           {}, item, { order: item.order + 1 }
         )
