@@ -12,7 +12,7 @@ const defaultState = [
     order: 0,
   },
   {
-    name: 'Chocolate & Caramel Brownie' ,
+    name: 'Chocolate Brownie' ,
     image: 'http://www.bunsinmyoven.com/wp-content/uploads/2012/03/dulce-de-leche-and-brownies.jpg',
     description: 'Rich chocolate brownie. Crisp on top with a gooey caramel centre.',
     price: 4.00,

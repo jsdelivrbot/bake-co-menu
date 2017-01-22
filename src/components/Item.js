@@ -24,7 +24,7 @@ class Item extends Component {
         <h6 className="subtitle">{ name }</h6>
         <img src={ image } className="menu-item menu-image" />
         <p>{ description }</p>
-        <p>${ price }</p>
+        <p>$ { (price).toFixed(2) }</p>
         <button className="button hvr-bounce-to-bottom inv-item" onClick={ this.deleteMe.bind(this) }>Remove item</button>
         <button disabled={!isAvailable} className="button hvr-bounce-to-bottom menu-item" onClick={ this.addToOrder.bind(this) }>{ buttonText }</button>
       </div>

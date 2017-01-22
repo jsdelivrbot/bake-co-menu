@@ -4,20 +4,25 @@ import Item from './Item'
 import addToOrder from '../actions/add-to-order'
 
 class Order extends Component {
+  renderPrice() {
+    console.log('price!')
+  }
 
   render() {
     return (
       <div className="app-list-item">
-        <h3 className="title">Order</h3>
+        <h3 className="title">Your Order</h3>
         { this.props.items.map((item, i) => {
           if (item.order > 0) {
             return (
               <li { ...item } key={ i } className="order-item">
-                { item.name } { item.order }
+                <span>{ item.order }</span> <span>{ item.name }</span>
+                <span className="float-right">$ { (item.price * item.order).toFixed(2) } </span>
               </li>
             )}
           }
         )}
+        <p>Total: { this.renderPrice() }</p>
       </div>
     )
   }

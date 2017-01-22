@@ -37,6 +37,10 @@ p {
   outline: none;
 }
 
+.float-right {
+  float: right;
+}
+
 .item {
   border: 1px dotted #C2C2C2;
   margin-bottom: 10px;
@@ -70,7 +74,13 @@ p {
 }
 
 .order-item {
+  border-bottom: 1px dotted #C2C2C2;
   list-style: none;
+  margin: 10px 0;
+}
+
+.order-item span {
+  /*margin-right: 20px;*/
 }
 
 .subtitle {
