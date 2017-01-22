@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import addItem from '../actions/index'
+import addItem from '../actions/add-item'
 
 class ItemForm extends Component {
   handleSubmit(event) {
@@ -27,16 +27,17 @@ class ItemForm extends Component {
 
   render() {
     return (
-      <form ref="itemForm" onSubmit={ this.handleSubmit.bind(this) }>
-        <input type="text" ref="name" name="name" placeholder="Item Name" />
-        <input type="text" ref="price" name="price" placeholder="Price" />
-        <input type="text" ref="description" name="description" placeholder="Description" />
-        <input type="text" ref="image" name="image" placeholder="Image" />
+      <form ref="itemForm" onSubmit={ this.handleSubmit.bind(this) } className="inventory-item">
+        <input type="text" ref="name" name="name" placeholder="Item Name" className="input-form" />
+        <input type="text" ref="description" name="description" placeholder="Description" className="input-form" />
+        <input type="text" ref="price" name="price" placeholder="Price" className="input-form" />
+        <input type="text" ref="image" name="image" placeholder="Image" className="input-form" />
         <select ref="available">
           <option value={ true }>Fresh</option>
           <option value={ false }>Sold Out</option>
         </select>
-        <input type="submit" />
+        <button type="submit" className="button hvr-bounce-to-bottom">Add item</button>
+        <br />
       </form>
     )
   }
