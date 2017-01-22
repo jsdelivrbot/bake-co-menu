@@ -31,7 +31,7 @@ class ItemForm extends Component {
         <input type="text" ref="name" name="name" placeholder="Item Name" className="input-form" />
         <input type="text" ref="description" name="description" placeholder="Description" className="input-form" />
         <input type="text" ref="price" name="price" placeholder="Price" className="input-form" />
-        <input type="text" ref="image" name="image" placeholder="Image" className="input-form" />
+        <input type="text" ref="image" name="image" placeholder="Image URL" className="input-form" />
         <select ref="available">
           <option value={ true }>Fresh</option>
           <option value={ false }>Sold Out</option>

@@ -37,7 +37,7 @@ p {
   outline: none;
 }
 
-.inventory-item {
+.item {
   border: 1px dotted #C2C2C2;
   margin-bottom: 10px;
   padding: 10px;
@@ -52,6 +52,21 @@ p {
 
 .input-form:focus {
   outline: none;
+}
+
+/* Menu items are not shown on inventory */
+.inventory .menu-item {
+  display: none;
+}
+
+/* Inventory items are not shown on menu */
+.menu .inv-item {
+  display: none;
+}
+
+.menu-image {
+  max-width: 100%;
+  margin-bottom: 10px;
 }
 
 .subtitle {
@@ -70,7 +85,8 @@ p {
   text-transform: uppercase;
 }
 
-/* Bounce To Bottom */
+/* Bounce To Bottom Effect on Button */
+/* TODO: Change effects to other file */
 .hvr-bounce-to-bottom {
   display: inline-block;
   vertical-align: middle;

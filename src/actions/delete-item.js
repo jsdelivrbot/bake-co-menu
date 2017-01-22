@@ -1,8 +1,8 @@
 export const DELETE_ITEM = 'DELETE_ITEM'
 
-export default (itemName) => {
+export default (itemToDelete) => {
   return {
     type: DELETE_ITEM,
-    payload: itemName
+    payload: itemToDelete
   }
 }
