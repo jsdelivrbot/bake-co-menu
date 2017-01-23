@@ -4,7 +4,15 @@ import OrderItem from './OrderItem'
 
 class Order extends Component {
   renderPrice() {
-    // console.log('price!')
+    var totalCost = 0;
+    var items = this.props.items
+
+    // Add each item cost to the totalCost
+    for(var i = 0; i < items.length; i++ ) {
+    	var itemCost = items[i].price * items[i].order;
+    	totalCost = totalCost + itemCost
+    }
+    return (totalCost).toFixed(2)
   }
 
   render() {
@@ -18,7 +26,9 @@ class Order extends Component {
             )}
           }
         )}
-        <p>Total: { this.renderPrice() }</p>
+        <div className="total-price">
+          <span>Total: </span><span className="float-right">$ { this.renderPrice() }</span>
+        </div>
       </div>
     )
   }

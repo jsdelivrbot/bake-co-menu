@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <div className="brand">
-          <h1>Bake & Co.</h1>
+          <h1>Bake & Code</h1>
           <p>Online Bakery Menu</p>
         </div>
         <div  className="app-list">
