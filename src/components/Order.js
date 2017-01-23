@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Item from './Item'
-import addToOrder from '../actions/add-to-order'
+import OrderItem from './OrderItem'
 
 class Order extends Component {
   renderPrice() {
-    console.log('price!')
+    // console.log('price!')
   }
 
   render() {
@@ -15,10 +14,7 @@ class Order extends Component {
         { this.props.items.map((item, i) => {
           if (item.order > 0) {
             return (
-              <li { ...item } key={ i } className="order-item">
-                <span>{ item.order }</span> <span>{ item.name }</span>
-                <span className="float-right">$ { (item.price * item.order).toFixed(2) } </span>
-              </li>
+              <OrderItem { ...item } key={ i } />
             )}
           }
         )}
@@ -34,4 +30,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { addToOrder })(Order)
+export default connect(mapStateToProps)(Order)

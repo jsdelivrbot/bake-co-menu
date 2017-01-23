@@ -1,6 +1,7 @@
 import { ADD_ITEM } from '../actions/add-item'
 import { DELETE_ITEM } from '../actions/delete-item'
 import { ADD_TO_ORDER } from '../actions/add-to-order'
+import { DELETE_FROM_ORDER } from '../actions/delete-from-order'
 
 const defaultState = [
   {
@@ -57,12 +58,22 @@ export default (state = defaultState, action) => {
       })
 
     case ADD_TO_ORDER:
-    return state.map((item) => {
-      if (item.name === action.payload) {
-        return Object.assign(
-          {}, item, { order: item.order + 1 }
-        )
-      }
+      return state.map((item) => {
+        if (item.name === action.payload) {
+          return Object.assign(
+            {}, item, { order: item.order + 1 }
+          )
+        }
+      return item
+    })
+
+    case DELETE_FROM_ORDER:
+      return state.map((item) => {
+        if (item.name === action.payload) {
+          return Object.assign(
+            {}, item, { order: item.order === 0 }
+          )
+        }
       return item
     })
 
