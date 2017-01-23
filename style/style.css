@@ -2,6 +2,7 @@ body {
   background: url('wov.png') repeat;
   color: #4b5d5a;
   font-family: 'Roboto Slab', serif;
+  overflow: hidden;
 }
 
 p {
