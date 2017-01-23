@@ -6,10 +6,16 @@ import Inventory from './Inventory'
 class App extends Component {
   render() {
     return (
-      <div className="app-list">
-        <Menu />
-        <Order />
-        <Inventory />
+      <div>
+        <div className="brand">
+          <h1>Bake & Co.</h1>
+          <p>Online Bakery Menu</p>
+        </div>
+        <div  className="app-list">
+          <Menu />
+          <Order />
+          <Inventory />
+        </div>
       </div>
     )
   }
