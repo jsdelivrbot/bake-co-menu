@@ -61,6 +61,16 @@ p {
   /*transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);*/
 }
 
+.button-delete {
+  background-color: transparent;
+  border: none;
+  display: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  margin-right: 5px;
+  padding-bottom: 0px;
+}
+
 .float-right {
   float: right;
 }
@@ -73,7 +83,7 @@ p {
 
 .input-form {
   border: none;
-  border-bottom: 1px solid #C2C2C2;
+  border-bottom: 1px solid #4b5d5a;
   margin-bottom: 5px;
   width: 100%;
 }
@@ -101,7 +111,13 @@ p {
   border-bottom: 1px dotted #4b5d5a;
   list-style: none;
   margin: 10px 0;
+  padding-bottom: 10px;
 }
+
+.order-item:hover .button-delete {
+  display: inline;
+}
+
 
 .order-item span {
   /*margin-right: 20px;*/
@@ -160,7 +176,7 @@ p {
 .hvr-bounce-to-bottom:hover, .hvr-bounce-to-bottom:focus, .hvr-bounce-to-bottom:active {
   color: white;
 }
-.hvr-bounce-to-bottom:hover:before, .hvr-bounce-to-bottom:focus:before, .hvr-bounce-to-bottom:active:before {
+.hvr-bounce-to-bottom:hover:before, .hvr-bounce-to-bottom:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
