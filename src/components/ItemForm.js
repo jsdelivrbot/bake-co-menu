@@ -27,7 +27,7 @@ class ItemForm extends Component {
 
   render() {
     return (
-      <form ref="itemForm" onSubmit={ this.handleSubmit.bind(this) } className="inventory-item item">
+      <form ref="itemForm" onSubmit={ this.handleSubmit.bind(this) } className="inventory-item item inventory-form">
         <input type="text" ref="name" name="name" placeholder="Item Name" className="input-form" />
         <input type="text" ref="description" name="description" placeholder="Description" className="input-form" />
         <input type="text" ref="price" name="price" placeholder="Price" className="input-form" />
