@@ -139,6 +139,7 @@ p {
 
 /* Bounce To Bottom Effect on Button */
 /* TODO: Change effects to other file */
+
 .hvr-bounce-to-bottom {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -179,4 +180,48 @@ p {
   transform: scaleY(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+/* Slide Right Effect on OrderItem */
+.slide-right{
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;
+
+	animation-duration: 0.3s;
+	-webkit-animation-duration: 0.3s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	visibility: visible !important;
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes slideRight {
+	0% {
+		-webkit-transform: translateX(-150%);
+	}
+	50%{
+		-webkit-transform: translateX(8%);
+	}
+	65%{
+		-webkit-transform: translateX(-4%);
+	}
+	80%{
+		-webkit-transform: translateX(4%);
+	}
+	95%{
+		-webkit-transform: translateX(-2%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+	}
 }
