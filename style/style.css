@@ -6,11 +6,22 @@ body {
 }
 
 hr {
-  border-top: 1px solid #4b5d5a;
+  border-top: 1px solid #65635F;
 }
 
 p {
   font-size: 14px;
+}
+
+::selection {
+  background: #65635F; /* WebKit/Blink Browsers */
+  color: white;
+}
+
+::-moz-selection {
+  background: #4b5d5a; /* WebKit/Blink Browsers */
+  color: white;
+
 }
 
 .app-list {
@@ -116,6 +127,10 @@ p {
   margin-bottom: 10px;
 }
 
+.order {
+  padding: 10px 20px;
+}
+
 .order-item {
   border-bottom: 1px dotted #4b5d5a;
   list-style: none;
@@ -138,7 +153,8 @@ p {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   letter-spacing: 4px;
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
+  text-align: center;
   text-transform: uppercase;
 }
 

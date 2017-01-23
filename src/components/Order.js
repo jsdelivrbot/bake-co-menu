@@ -17,7 +17,7 @@ class Order extends Component {
 
   render() {
     return (
-      <div className="app-list-item">
+      <div className="app-list-item order">
         <h3 className="title">Your Order</h3>
         { this.props.items.map((item, i) => {
           if (item.order > 0) {
