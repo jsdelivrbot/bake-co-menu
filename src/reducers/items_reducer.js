@@ -2,6 +2,7 @@ import { ADD_ITEM } from '../actions/add-item'
 import { DELETE_ITEM } from '../actions/delete-item'
 import { ADD_TO_ORDER } from '../actions/add-to-order'
 import { DELETE_FROM_ORDER } from '../actions/delete-from-order'
+import { LOAD_SAMPLES } from '../actions/load-samples'
 
 const defaultState = [
   {
@@ -39,7 +40,7 @@ const defaultState = [
   }
 ]
 
-export default (state = defaultState, action) => {
+export default (state = [], action) => {
   switch(action.type) {
     case ADD_ITEM:
       const item = {
@@ -76,6 +77,9 @@ export default (state = defaultState, action) => {
         }
       return item
     })
+
+    case LOAD_SAMPLES:
+      return defaultState
 
     default:
       return state

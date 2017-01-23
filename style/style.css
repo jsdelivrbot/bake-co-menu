@@ -5,6 +5,10 @@ body {
   overflow: hidden;
 }
 
+hr {
+  border-top: 1px solid #4b5d5a;
+}
+
 p {
   font-size: 14px;
 }

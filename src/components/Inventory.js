@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Item from './Item'
 import ItemForm from './ItemForm'
+import loadSamples from '../actions/load-samples'
 
 class Inventory extends Component {
+
   render() {
     return (
       <div className="app-list-item inventory">
@@ -11,6 +13,8 @@ class Inventory extends Component {
         { this.props.items.map((item, i) => <Item { ...item } key={ i } /> )}
 
         <ItemForm />
+        <hr />
+        <button className="button hvr-bounce-to-bottom inv-item" onClick={ this.props.loadSamples }>Load Sample Items</button>
       </div>
     )
   }
@@ -22,4 +26,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Inventory)
+export default connect(mapStateToProps, { loadSamples })(Inventory)
