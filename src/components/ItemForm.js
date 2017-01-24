@@ -27,16 +27,50 @@ class ItemForm extends Component {
 
   render() {
     return (
-      <form ref="itemForm" onSubmit={ this.handleSubmit.bind(this) } className="inventory-item item inventory-form">
-        <input type="text" ref="name" name="name" placeholder="Item Name" className="input-form" />
-        <input type="text" ref="description" name="description" placeholder="Description" className="input-form" />
-        <input type="text" ref="price" name="price" placeholder="Price" className="input-form" />
-        <input type="text" ref="image" name="image" placeholder="Image URL" className="input-form" />
-        <select ref="available">
-          <option value={ true }>Fresh</option>
-          <option value={ false }>Sold Out</option>
+      <form
+        ref="itemForm"
+        onSubmit={ this.handleSubmit.bind(this) }
+        className="inventory-item item inventory-form">
+        <input
+          type="text"
+          ref="name"
+          name="name"
+          placeholder="Item Name"
+          className="input-form" />
+        <input
+          type="text"
+          ref="description"
+          name="description"
+          placeholder="Description"
+          className="input-form" />
+        <input
+          type="text"
+          ref="price"
+          name="price"
+          placeholder="Price"
+          className="input-form" />
+        <input
+          type="text"
+          ref="image"
+          name="image"
+          placeholder="Image URL"
+          className="input-form" />
+        <select
+          ref="available">
+          <option
+            value={ true }>
+            Fresh
+          </option>
+          <option
+            value={ false }>
+            Sold Out
+          </option>
         </select>
-        <button type="submit" className="button hvr-bounce-to-bottom">+ Add item</button>
+        <button
+          type="submit"
+          className="button hvr-bounce-to-bottom">
+          + Add item
+        </button>
         <br />
       </form>
     )

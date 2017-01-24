@@ -3,6 +3,7 @@ import { DELETE_ITEM } from '../actions/delete-item'
 import { ADD_TO_ORDER } from '../actions/add-to-order'
 import { DELETE_FROM_ORDER } from '../actions/delete-from-order'
 import { LOAD_SAMPLES } from '../actions/load-samples'
+import { EDIT_ITEM } from '../actions/edit-item'
 
 const defaultState = [
   {
@@ -80,6 +81,18 @@ export default (state = [], action) => {
 
     case LOAD_SAMPLES:
       return defaultState
+
+    case EDIT_ITEM:
+      return state.map((item) => {
+        if (item.name === action.payload.name) {
+          console.log(action.payload.description)
+          return Object.assign(
+            {}, item, { description: action.payload.description }
+          )
+        }
+      return item
+    })
+
 
     default:
       return state

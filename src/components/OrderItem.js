@@ -21,10 +21,19 @@ class OrderItem extends Component {
     const { name, image, description, price, available, order } = this.props
 
     return (
-      <div className="order-item slide-right" id={name}>
-        <button onClick={ this.deleteFromOrder.bind(this) } className="button-delete hvr-bounce-to-bottom">x</button>
-        <span>{ order }</span> <span>{ name }</span>
-        <span className="float-right">$ { ( price * order).toFixed(2) }</span>
+      <div
+        className="order-item slide-right"
+        id={name}>
+        <button
+          onClick={ this.deleteFromOrder.bind(this) }
+          className="button-delete hvr-bounce-to-bottom">x
+        </button>
+        <span>{ order }</span>&nbsp;
+        <span>{ name }</span>
+        <span
+          className="float-right">
+          $&nbsp;{ ( price * order).toFixed(2) }
+        </span>
       </div>
     )
   }
