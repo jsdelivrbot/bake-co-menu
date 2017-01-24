@@ -24,6 +24,10 @@ p {
 
 }
 
+.alert {
+  text-align: center;
+}
+
 .app-list {
   display: inline-flex;
   height: 81vh;

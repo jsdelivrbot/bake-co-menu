@@ -3,13 +3,26 @@ import { connect } from 'react-redux'
 import OrderItem from './OrderItem'
 
 class Order extends Component {
+  orderAmount() {
+    var totalOrder = 0
+    var items = this.props.items
+
+    for(var i = 0; i < items.length; i++ ) {
+      var itemOrder = items[i].order
+      totalOrder = totalOrder + itemOrder
+    }
+    if (totalOrder === 0) {
+      return <p className="alert">Please place your order.</p>
+    }
+  }
+
   renderPrice() {
     var totalCost = 0;
     var items = this.props.items
 
     // Add each item cost to the totalCost
     for(var i = 0; i < items.length; i++ ) {
-    	var itemCost = items[i].price * items[i].order;
+    	var itemCost = items[i].price * items[i].order
     	totalCost = totalCost + itemCost
     }
     return (totalCost).toFixed(2)
@@ -26,6 +39,8 @@ class Order extends Component {
             )}
           }
         )}
+
+        {this.orderAmount()}
         <div className="total-price">
           <span>Total: </span><span className="float-right">$ { this.renderPrice() }</span>
         </div>
@@ -33,6 +48,10 @@ class Order extends Component {
     )
   }
 }
+
+// TODO: refactor this whole component code!
+// Maybe it's better to have an order reducer instead of filtering all the items in this component...
+// Otherwise this component has too much code repeating for mapping the items and stuff
 
 function mapStateToProps(state) {
   return {
