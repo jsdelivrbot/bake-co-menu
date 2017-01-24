@@ -38,6 +38,7 @@ p {
   background-color: #FCF8ED;
   border: 1px solid #4b5d5a;
   margin: 10px;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 10px;
   width: calc(100% / 3)
@@ -77,8 +78,10 @@ p {
 }
 
 .button[disabled] {
-  color: red;
-  /*transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);*/
+  background: #ffbaba;
+  color: #4b5d5a;
+  cursor: not-allowed;
+  transform: rotate(-15deg)  translateX(6%) translateY(-165%) scale(1.5);
 }
 
 .button-delete {

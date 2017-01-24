@@ -10,7 +10,7 @@ const defaultState = [
     image: 'https://whateversleftdotorg.files.wordpress.com/2014/03/dsc_1354-3.jpg',
     description: 'Fresh homemade bagel with a generous sprinkling of sesame seeds.',
     price: 2.50,
-    available: true,
+    available: false,
     order: 0,
   },
   {
@@ -40,7 +40,7 @@ const defaultState = [
   }
 ]
 
-export default (state = defaultState, action) => {
+export default (state = [], action) => {
   switch(action.type) {
     case ADD_ITEM:
       const item = {

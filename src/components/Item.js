@@ -18,6 +18,7 @@ class Item extends Component {
     const { name, image, description, price, available, order } = this.props
     var isAvailable = (this.props.available === true )
     var buttonText = (isAvailable ? 'Add To Order' : 'Sold Out!');
+    var buttonClass = (isAvailable ? 'button hvr-bounce-to-bottom menu-item' : 'button menu-item')
 
     return (
       <div className="item">
@@ -27,7 +28,7 @@ class Item extends Component {
         <p>$ { price }</p>
         {/* <p>${ (price).toFixed(2) }</p> */}
         <button className="button hvr-bounce-to-bottom inv-item" onClick={ this.deleteMe.bind(this) }>Remove item</button>
-        <button disabled={!isAvailable} className="button hvr-bounce-to-bottom menu-item" onClick={ this.addToOrder.bind(this) }>{ buttonText }</button>
+      <button disabled={!isAvailable} className={ buttonClass } onClick={ this.addToOrder.bind(this) }>{ buttonText }</button>
       </div>
     )
   }
