@@ -43,22 +43,27 @@ class Item extends Component {
 
   render() {
     const { name, image, description, price, available, order } = this.props
-    var isAvailable = (this.props.available === true )
-    var buttonText = (isAvailable ? 'Add To Order' : 'Sold Out!');
-    var buttonClass = (isAvailable ? 'button hvr-bounce-to-bottom menu-item' : 'button menu-item')
 
     return (
       <div className="item">
         <h6 className="subtitle">{ name }</h6>
-        <img src={ image } className="menu-item menu-image" />
         <form onSubmit={ this.onFormSubmit }>
           <input value={ this.state.description } onChange={ this.onInputChange }/>
           <button type="submit" className="btn btn-secondary">modify</button>
         </form>
         <p>$ { price }</p>
         {/* <p>${ (price).toFixed(2) }</p> */}
-        <button className="button hvr-bounce-to-bottom inv-item" onClick={ this.deleteMe.bind(this) }>Remove item</button>
-      <button disabled={!isAvailable} className={ buttonClass } onClick={ this.addToOrder.bind(this) }>{ buttonText }</button>
+        <button
+          className="button hvr-bounce-to-bottom button-inv"
+          onClick={ this.deleteMe.bind(this) }>
+          Remove
+        </button>
+
+        {/* DUMMY BUTTON FOR NOW */}
+        <button
+          className="button hvr-bounce-to-bottom button-inv float-right">
+          Edit
+        </button>
       </div>
     )
   }

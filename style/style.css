@@ -94,6 +94,10 @@ p {
   padding-bottom: 0px;
 }
 
+.button-inv {
+  width: 48%;
+}
+
 .float-right {
   float: right;
 }
@@ -113,16 +117,6 @@ p {
 
 .input-form:focus {
   outline: none;
-}
-
-/* Menu items are not shown on inventory */
-.inventory .menu-item {
-  display: none;
-}
-
-/* Inventory items are not shown on menu */
-.menu .inv-item {
-  display: none;
 }
 
 .inventory-form > input {

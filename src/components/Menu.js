@@ -7,7 +7,9 @@ class Menu extends Component {
     return (
       <div className="app-list-item menu">
         <h3 className="title">Menu</h3>
-        { this.props.items.map((item, i) => <MenuItem { ...item } key={ i } /> )}
+        { this.props.items.map((item, i) =>
+          <MenuItem { ...item } key={ i } /> )
+        }
       </div>
     )
   }
