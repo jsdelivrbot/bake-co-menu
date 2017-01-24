@@ -20,7 +20,7 @@ class MenuItem extends Component {
         <h6 className="subtitle">{ name }</h6>
         <img src={ image } className="menu-image" />
         <p>{ description }</p>
-        <p>${ (price).toFixed(2) }</p>
+        <p>$&nbsp;{ price }</p>
       <button
         disabled={!isAvailable}
         className={ buttonClass }

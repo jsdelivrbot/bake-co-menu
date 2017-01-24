@@ -28,11 +28,11 @@ class OrderItem extends Component {
           onClick={ this.deleteFromOrder.bind(this) }
           className="button-delete hvr-bounce-to-bottom">x
         </button>
-        <span>{ order }</span>
+        <span>{ order }</span>&nbsp;
         <span>{ name }</span>
         <span
           className="float-right">
-          $ { ( price * order).toFixed(2) }
+          $&nbsp;{ ( price * order).toFixed(2) }
         </span>
       </div>
     )
