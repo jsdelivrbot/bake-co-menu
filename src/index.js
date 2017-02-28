@@ -10,8 +10,6 @@ import reducers from './reducers'
 const store = createStore(reducers, undefined, autoRehydrate())
 persistStore(store)
 
-// const createStoreWithMiddleware = applyMiddleware()(createStore)
-
 ReactDOM.render(
   <Provider store={ store }>
     <App />
